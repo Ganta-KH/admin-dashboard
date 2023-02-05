@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 150px 1fr;
+}
+
+.sidebar,
+.activities,
+.system{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    background-color: #0369a1;
+    gap: 58px;
+
+    grid-row: 1 / -1;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 34px;
+    font-weight: bold;
+    padding: 30px 50px;
+}
+
+.activities > button,
+.system > button {
+    background-color: #0369a1;
+    color: white;
+    padding: 15px 50px;
+    font-size: 20px;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.activities > button:hover,
+.system > button:hover {
+    background-color: #0284c7;
+}
