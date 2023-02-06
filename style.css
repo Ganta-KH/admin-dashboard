@@ -1,7 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+* {
+    font-family: 'Roboto';
+}
+
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 290px 1fr;
     grid-template-rows: 150px 1fr;
 }
 
@@ -15,8 +21,21 @@ body {
 .sidebar {
     background-color: #0369a1;
     gap: 58px;
-
+    
     grid-row: 1 / -1;
+}
+
+svg {
+    fill: currentColor;
+}
+
+.sidebar > a svg {
+    width: 55px;
+}
+
+.activities > button > svg,
+.system > button > svg {
+    width: 26px;
 }
 
 .sidebar a {
@@ -24,22 +43,31 @@ body {
     text-decoration: none;
     font-size: 34px;
     font-weight: bold;
-    padding: 30px 50px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .activities > button,
 .system > button {
     background-color: #0369a1;
     color: white;
-    padding: 15px 50px;
-    font-size: 20px;
+    padding: 15px 30px;
+    font-size: 21px;
     border: none;
     text-align: left;
     font-weight: bold;
     transition: 0.2s;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .activities > button:hover,
 .system > button:hover {
     background-color: #0284c7;
+    cursor: pointer;
 }
