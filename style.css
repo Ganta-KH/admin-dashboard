@@ -1,19 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 * {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     display: grid;
     grid-template-columns: 290px 1fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 220px 1fr;
 }
 
 .sidebar,
 .activities,
-.system{
+.system, 
+.hero {
     display: flex;
     flex-direction: column;
 }
@@ -71,3 +73,121 @@ svg {
     background-color: #0284c7;
     cursor: pointer;
 }
+
+.hero {
+    padding: 0 55px;
+    background-color: #f8fafc;
+    justify-content: center;
+    box-shadow: 4px 4px 10px #cbd5e1;
+}
+
+.hero-top,
+.hero-bottom,
+.hero-top > form,
+.hero-top > .profile,
+.hero-bottom,
+.hero-bottom > .profile,
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.hero-top {
+    justify-content: space-around;
+    gap: 20%;
+}
+
+.hero-top > form {
+    gap: 16px;
+    flex: 2;
+}
+
+.hero-top > form > svg,
+.profile > svg {
+    height: 34px;
+} 
+
+.hero-top > form > svg:hover,
+.profile > svg:hover {
+    cursor: pointer;
+}
+
+.hero-top > form > input[type="search"] {
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #dee5ee;
+    border: none;
+    padding: 5px 15px;
+    flex: 1;
+} 
+
+.hero-top > form > input[type="search"]:focus {
+    border: 1px solid darkgray;
+}
+
+.hero-top > form > input[type="search"]:hover {
+    background-color: #cbd5e1;
+}
+
+.hero-top > .profile {
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+}
+
+.hero-top > .profile > img {
+    width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero-top > .profile > p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hero-bottom {
+    justify-content: space-between;
+}
+
+.hero-bottom > .profile {
+    gap: 16px;
+    min-width: 420px;
+}
+
+.hero-bottom > .profile > img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.hero-bottom > .profile > .profile-text {
+    font-weight: bold;
+}
+
+.hero-bottom > .profile > .profile-text div:first-child {
+    font-size: 14px;
+}
+
+.hero-bottom > .profile > .profile-text div:nth-child(2) {
+    font-size: 26px;
+}
+
+.actions {
+    gap: 24px;
+}
+
+.actions > button {
+    background-color: #0369a1;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.actions > button:hover {
+    background-color:#0284c7;
+    cursor: pointer;
+}
+
