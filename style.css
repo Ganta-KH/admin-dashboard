@@ -12,6 +12,9 @@ body {
     grid-template-rows: 220px 1fr;
 }
 
+main {
+    overflow-y: scroll;
+}
 .sidebar,
 .activities,
 .system, 
