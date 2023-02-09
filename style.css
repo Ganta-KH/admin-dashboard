@@ -12,10 +12,6 @@ body {
     grid-template-rows: 190px 1fr;
 }
 
-main {
-    height: calc(100vh-220px);
-    overflow-y: scroll;
-}
 .sidebar,
 .activities,
 .system, 
