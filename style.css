@@ -9,7 +9,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 290px 1fr;
-    grid-template-rows: 220px 1fr;
+    grid-template-rows: 190px 1fr;
 }
 
 main {
@@ -194,4 +194,140 @@ svg {
     background-color:#0284c7;
     cursor: pointer;
 }
+
+main {
+    padding: 24px;
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 24px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(340px, 400px), 1fr));
+    grid-template-rows: 20px;
+    grid-auto-rows: 250px;
+    gap: 24px;
+}
+
+.projects .nav {
+    grid-column: 1 / -1;
+}
+
+.nav {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.orangebar {
+    background-color: #fdba74;
+    width: 10px;
+}
+
+.card {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 5px 5px 5px #cbd5e1;
+}
+
+.card:hover,
+.announcements-box:hover,
+.profiles:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.card-content {
+    padding: 10px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-content p:nth-child(2) {
+    height: 100%;
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+.card-content p:nth-child(1) {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.functions svg {
+    width: 30px;
+}
+
+.functions svg:hover,
+.card-content p:nth-child(1):hover,
+.announcements-title:hover {
+    cursor: pointer;
+}
+
+.functions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    padding: 10px;
+}
+
+.rightbar,
+.announcements,
+.trending,
+.profiles {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.announcements-box,
+.profiles {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 5px 5px 5px #cbd5e1;
+}
+
+.announcements-title {
+    font-weight: bold;
+}
+
+.announcement p:last-child {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.profiles {
+    gap: 20px;
+}
+
+.profile-trend {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.profile-trend img {
+    height: 75px;
+    width: 75px;
+    min-width: 50px;
+    border-radius: 50%;
+}
+
+.trend p {
+    margin: 5px 0;
+}
+
+
+.trend p:last-child {
+    color: #6b7280;
+}
+
+
 
