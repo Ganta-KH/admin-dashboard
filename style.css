@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
+:root {
+    --shadow-color: #cbd5e1;
+    --text-color: #6b7280;
+}
+
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -7,10 +12,9 @@
 
 body {
     margin: 0;
-    display: grid;
-    grid-template-columns: 290px 1fr;
-    grid-template-rows: 190px 1fr;
+    background-color: #e2e8f0;
 }
+
 
 .sidebar,
 .activities,
@@ -20,9 +24,18 @@ body {
     flex-direction: column;
 }
 
+.content {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    grid-template-rows: 190px 1fr;
+}
+
 .sidebar {
     background-color: #0369a1;
     gap: 58px;
+    position: fixed;
+    width: 290px;
+    height: 100vh;
     
     grid-row: 1 / -1;
 }
@@ -79,7 +92,8 @@ svg {
     padding: 0 55px;
     background-color: #f8fafc;
     justify-content: center;
-    box-shadow: 4px 4px 10px #cbd5e1;
+    box-shadow: 0px 5px 5px var(--shadow-color);
+    grid-column-start: 2;
 }
 
 .hero-top,
@@ -103,14 +117,19 @@ svg {
     flex: 2;
 }
 
-.hero-top > form > svg,
-.profile > svg {
+.hero-top > form > svg{
     height: 34px;
 } 
+
+.hero-top > .profile > svg {
+    height: 26px;
+}
 
 .hero-top > form > svg:hover,
 .profile > svg:hover {
     cursor: pointer;
+    transform: scale(1.25);
+    transition: 0.2s;
 }
 
 .hero-top > form > input[type="search"] {
@@ -123,7 +142,7 @@ svg {
 } 
 
 .hero-top > form > input[type="search"]:focus {
-    border: 1px solid darkgray;
+    border: 1px solid blue;
 }
 
 .hero-top > form > input[type="search"]:hover {
@@ -196,15 +215,15 @@ svg {
 
 main {
     padding: 24px;
-    background-color: #e2e8f0;
     display: grid;
     grid-template-columns: 1fr 350px;
     gap: 24px;
+    grid-column-start: 2;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(400px, 500px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-rows: 20px;
     grid-auto-rows: 250px;
     gap: 24px;
@@ -323,9 +342,14 @@ main {
     margin: 5px 0;
 }
 
+.trend p:first-child {
+    font-weight: 500;
+    font-size: 17px;
+}
 
 .trend p:last-child {
     color: #6b7280;
+    font-size: 15px;
 }
 
 
