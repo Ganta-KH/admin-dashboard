@@ -61,7 +61,6 @@ svg {
     border: none;
     text-align: left;
     font-weight: bold;
-    transition: 0.2s;
 
     display: flex;
     align-items: center;
@@ -72,6 +71,8 @@ svg {
 .system > button:hover {
     background-color: #0284c7;
     cursor: pointer;
+    transform: scale(1.03);
+    transition: 0.2s;
 }
 
 .hero {
@@ -189,6 +190,8 @@ svg {
 .actions > button:hover {
     background-color:#0284c7;
     cursor: pointer;
+    transform: scale(1.03);
+    transition: 0.2s;
 }
 
 main {
@@ -201,7 +204,7 @@ main {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(340px, 400px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(360px, 400px), 1fr));
     grid-template-rows: 20px;
     grid-auto-rows: 250px;
     gap: 24px;
