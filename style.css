@@ -204,7 +204,7 @@ main {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(360px, 400px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 500px), 1fr));
     grid-template-rows: 20px;
     grid-auto-rows: 250px;
     gap: 24px;
